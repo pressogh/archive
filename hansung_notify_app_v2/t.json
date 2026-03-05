@@ -1,0 +1,48 @@
+{
+    "_bodyBlob": {
+        "_data": {
+            "__collector": [Object
+            ],
+            "blobId": "0c0b6a78-053a-4de5-996b-a3d0dccf70f3",
+            "offset": 0,
+            "size": 40048
+        }
+    },
+    "_bodyInit": {
+        "_data": {
+            "__collector": [Object
+            ],
+            "blobId": "0c0b6a78-053a-4de5-996b-a3d0dccf70f3",
+            "offset": 0,
+            "size": 40048
+        }
+    },
+    "bodyUsed": false,
+    "headers": {
+        "map": {
+            "accept-ranges": "none",
+            "cache-control": "private, pre-check=0, post-check=0, max-age=0, no-transform",
+            "connection": "Keep-Alive",
+            "content-language": "ko",
+            "content-script-type": "text/javascript",
+            "content-security-policy": "script-src * 'unsafe-inline' 'unsafe-eval'",
+            "content-style-type": "text/css",
+            "content-type": "text/html; charset=utf-8",
+            "date": "Sun, 06 Feb 2022 10:53:00 GMT",
+            "expires": "",
+            "keep-alive": "timeout=5, max=99",
+            "pragma": "no-cache",
+            "server": "Apache",
+            "vary": "Accept-Encoding,User-Agent",
+            "x-frame-options": "sameorigin",
+            "x-powered-by": "PHP/7.1.25",
+            "x-ua-compatible": "IE=Edge",
+            "x-xss-protection": "1;mode=block"
+        }
+    },
+    "ok": true,
+    "status": 200,
+    "statusText": "",
+    "type": "default",
+    "url": "https://learn.hansung.ac.kr/login.php?errorcode=3"
+}
