@@ -1,0 +1,21 @@
+.title {
+    display: flex;
+    padding-bottom: 1vh;
+    margin-bottom: 1vh;
+    border-bottom: 1px solid rgba(219, 219, 219, 1);
+}
+
+.tooltipItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 10vw;
+}
+
+.tooltipName {
+    margin-right: 2vw;
+}
+
+.tooltipGrade {
+    margin-left: 2vw;
+}
