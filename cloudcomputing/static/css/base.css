@@ -1,0 +1,41 @@
+body {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Pretendard, system-ui;
+}
+
+div {
+    color: #252525;
+}
+
+a {
+    text-decoration: none;
+    color: #252525;
+}
+
+.base-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 70vh;
+    background-color: rgb(96, 77, 255);
+}
+
+.animate-floating {
+    animation: floating 2s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

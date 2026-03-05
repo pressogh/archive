@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" >
+{% endblock %}
+
+{% block content %}
+    <div class="main-container">
+        <div>
+            <div class="main-item-container" style="margin-top: 6vh;">
+                <div class="main-title">클라우드 컴퓨팅</div>
+                <div class="main-desc">
+                    <div>클라우드 컴퓨팅은 IT 리소스를 인터넷을 통해 온디맨드로 제공하고 사용한 만큼만 비용을 지불하는 것을 말합니다.</div>
+                    <div>물리적 데이터 센터와 서버를 구입, 소유 및 유지 관리하는 대신, 클라우드 공급자로부터 필요에 따라 컴퓨팅 파워, 스토리지, 데이터베이스와 같은 기술 서비스에 액세스할 수 있습니다.</div>
+                </div>
+            </div>
+
+            <div class="main-item-container">
+                <div class="main-title">클라우드 컴퓨팅 장점</div>
+                <div class="main-desc">
+                    <div>
+                        <h3>신뢰성</h3>
+                        <ul>
+                            <li>보안에 강하고 안전하며 언제든 이용할 수 있습니다.</li>
+                            <li>빠른 응답 시간으로 언제 어디서나 액세스할 수 있습니다.</li>
+                            <li>풀타임 보안 전문가들이 관리하는 안전한 서버에서 운영됩니다.</li>
+                            <li>데이터가 중복되거나 원격으로 백업되었는지 파악할 수 있습니다.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>유연성</h3>
+                        <ul>
+                            <li>필요할 때 필요한 만큼 컴퓨팅 능력을 확보할 수 있습니다.</li>
+                            <li>서버, 네트워킹, 스토리지를 추가 또는 제거할 수 있습니다.</li>
+                            <li>새로운 사용자를 즉각 온보딩할 수 있습니다.</li>
+                            <li>새로운 지역으로 확장할 수 있습니다.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>경제성</h3>
+                        <ul>
+                            <li>하드웨어나 시설에 대한 초기 금융 비용이 필요하지 않습니다.</li>
+                            <li>시스템을 유지보수하고 업그레이드하는 데 쓰는 시간을 줄여줍니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-item-container">
+                <div class="main-title">클라우드 컴퓨팅 유형</div>
+                <div class="main-desc">
+                    <div>
+                        <div style="margin-bottom: 28px;">
+                            <div style="display: flex; flex-direction: row; align-items: flex-end;">
+                                <div style="font-size: 30px; font-weight: 700;">SaaS</div>
+                                <div style="font-size: 20px; font-weight: 200; color: #252525; margin: 0 0 4px 6px; text-decoration: underline dotted;">Software as a Service</div>
+                            </div>
+                            <div>
+                                클라우드 애플리케이션과 기본 IT 인프라 및 플랫폼을 인터넷 브라우저를 통해 최종 사용자에게 제공하는 클라우드 컴퓨팅 형태입니다.
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 28px;">
+                            <div style="display: flex; flex-direction: row; align-items: flex-end;">
+                                <div style="font-size: 30px; font-weight: 700;">Paas</div>
+                                <div style="font-size: 20px; font-weight: 200; color: #252525; margin: 0 0 4px 6px; text-decoration: underline dotted;">Platform as a Service</div>
+                            </div>
+                            <div>
+                                IaaS 형태의 가상화된 클라우드 위에 사용자가 원하는 서비스를 개발할 수 있도록 개발 환경(Platform)을 미리 구축해, 이를 서비스 형태로 제공하는 클라우드 컴퓨팅 형태입니다.
+                            </div>
+                        </div>
+
+                        <div>
+                            <div style="display: flex; flex-direction: row; align-items: flex-end;">
+                                <div style="font-size: 30px; font-weight: 700;">IaaS</div>
+                                <div style="font-size: 20px; font-weight: 200; color: #252525; margin: 0 0 4px 6px; text-decoration: underline dotted;">Infrastructure as a Service</div>
+                            </div>
+                            <div>
+                                물리적 서버, 네트워크, 스토리지 등의 IT 인프라를 가상화하여, 사용자에게 제공하는 클라우드 컴퓨팅 형태입니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-item-container">
+                <div class="main-title" style="margin-bottom: 40px;">클라우드 컴퓨팅 서비스</div>
+                <div class="main-card-container">
+                {% for item in posts %}
+                    <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">
+                        <div class="main-card">
+                            <div class="main-card-image">
+                                <img src="{% static item.thumbnail %}" style="border-radius: 40px;" width="120" height="120" />
+                            </div>
+                            <div class="main-card-content">
+                                <div class="main-card-title" style="color: {{ item.color }}">{{ item.title }}</div>
+                                <div class="main-card-desc">
+                                    {{ item.desc | linebreaksbr }}
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+                </div>
+            </div>
+
+            <div class="main-item-container">
+                <div class="main-title" style="margin-bottom: 40px;">클라우드 컴퓨팅 동향</div>
+                <div class="main-desc" style="display: flex; flex-direction: column;">
+                    <div>
+                        최근 코로나19로 인하여 원격근무, 비대면 고객서비스, 동영상서비스(OTT), 온라인 강의 등 다양한 언택트 서비스들이 확장되면서 <br />클라우드 컴퓨팅의 성장이 가속화되고 있습니다.
+                    </div>
+                    <canvas id="chart" style="width: 820px; height: 400px; align-self: center; margin-top: 60px; margin-bottom: 60px;"></canvas>
+                    <div>
+                        도커와 쿠버네티스의 등장으로 컨테이너 기반의 가상화 기술이 확산되면서, 클라우드 컴퓨팅의 성장이 가속화되고 있습니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('chart');
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2019년', '2020년', '2021년', '2022년'],
+                datasets: [
+                    {
+                        label: 'IaaS',
+                        data: [445, 504, 643, 810],
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'PaaS',
+                        data: [375, 435, 573, 720],
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'SaaS',
+                        data: [1021, 1047, 1210, 1406],
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+{% endblock %}
