@@ -1,0 +1,6 @@
+*.zip
+.vscode
+.DS_Store
+.idea
+*.gif
+settings.json
