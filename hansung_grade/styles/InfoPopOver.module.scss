@@ -1,0 +1,79 @@
+.infoDetail {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    min-width: 200px;
+    width: 340px;
+}
+
+.infoDetailTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px dotted rgba(219, 219, 219, 1);
+    padding-bottom: 2vh;
+    margin-bottom: 2vh;
+}
+
+.infoDetailTitleLeft {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.infoDetailTitleRight {
+    display: flex;
+    align-self: flex-start;
+}
+
+.infoDetailName {
+    margin-left: 1vw;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.infoDetailTrack {
+    margin-left: 1vw;
+    font-size: 12px;
+}
+
+.infoDetailGrade {
+    font-weight: lighter;
+    font-size: 1.5vw;
+}
+
+.infoDetailContent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.infoDetailItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.infoDetailItemUpText {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.infoDetailItemDownText {
+    //font-weight: bold;
+    font-size: 16px;
+}
+
+.logoutIcon {
+    filter: drop-shadow(1px 2px 2px rgba(255, 0, 0, 0.5));
+    transition: 0.2s;
+}
+
+.logoutIcon:hover {
+    transform: scale(1.25);
+    transition: 0.2s;
+}
