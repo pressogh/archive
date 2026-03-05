@@ -1,0 +1,22 @@
+<!-- templates/account/login.html -->
+
+{% extends 'account/base.html' %}
+{% block content %}
+<div class="d-flex justify-content-center align-items-center" style="margin-top: 300px">
+    <div class="d-flex justify-content-center align-items-center" style="border: 1px solid #c9c9c9; padding: 75px 0px 75px 0px; width: 400px">
+        <form action="{% url 'account:login' %}" method='post' style="display: flex; flex-direction: column;">
+            {% csrf_token %}
+            <h1>로그인</h1>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="username" placeholder="username">
+                <label for="username">username</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="password" placeholder="password">
+                <label for="password">password</label>
+              </div>
+            <input type="submit" value="login" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+{% endblock %}

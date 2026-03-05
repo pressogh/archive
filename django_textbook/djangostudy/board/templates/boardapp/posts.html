@@ -1,0 +1,34 @@
+<!-- templates/boardapp/posts.html -->
+
+{% extends 'boardapp/base.html' %}
+{% block content %}
+<div>
+    <table class="table">
+        <thead>
+            <tr class="table-dark">
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일시</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for post in post_list %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>
+                        <div class="d-flex">
+                            <a href="{% url 'boardapp:detail' post.id %}">{{ post.title }}</a>
+                            <div class="text-danger small mx-2">{{ post.comment_set.count }}</div>
+                        </div>
+                    </td>
+                    <td>{{ post.author.username }}</td>
+                    <td>{{ post.create_time }}</td>
+                </tr>
+            {% endfor %}
+    </table>
+
+    <button class="btn btn-primary " type="button" onclick="location.href='{% url 'boardapp:upload' %}'">등록하기</button>
+</div>
+{% endblock %}

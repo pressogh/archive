@@ -1,0 +1,44 @@
+.header-container {
+  height: 54px;
+  background-color: white;
+  border: solid 1px #D2D2D2;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  width: 945px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo img {
+  width: 100px;
+  height: 36px;
+}
+
+input {
+  border: solid 1px #D2D2D2;
+  text-align: center;
+}
+
+input[type="text"], textarea {
+  background-color: #fafafa;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.header-right div {
+  margin: 10px;
+}
+
+.header-right a {
+  color: black;
+}

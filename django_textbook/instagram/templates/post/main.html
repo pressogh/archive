@@ -1,0 +1,52 @@
+{% extends "post/base.html" %}
+{% load static %}
+
+{% block content %}
+
+{% for post in posts %}
+    <div class="post-container">
+        <div class="header">
+            <div class="profile">
+                {% if post.author.profile_photo != None %}
+                    <img src="{{ post.author.profile_photo }}">
+                {% else %}
+                    <img src="{% static 'img/post/no_avatar.png' %}">
+                {% endif %}
+                <div>
+                    {{ post.author.username }}
+                </div>
+            </div>
+
+            <div class="icon">
+                <i class="fa fa-pencil fa1x"></i>
+                <i class="fa fa-trash-o fa1x"></i>
+            </div>
+
+        </div>
+
+        <img class="post-image" src="{{ post.image }}">
+
+        <i class="fa fa-heart-o fa-2x"></i>
+        <i class="fa fa-heart fa-2x"></i>
+
+        <div class="content-container">
+            <div class="content-image">
+                <b>{{ post.author.username }}</b>
+                {{ post.caption }}
+            </div>
+
+            <div class="comment">
+                {% for comment in post.comment_post %}
+                    <div id="comment-{{ comment.id }}">
+                        {{ comment.contents }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+
+    </div>
+
+{% endfor %}
+
+{% endblock content %}

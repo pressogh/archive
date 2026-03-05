@@ -1,0 +1,27 @@
+<!-- templates/post/new_post.html -->
+
+{% extends "post/base.html" %}
+
+{% block content %}
+
+<div class="container my-3">
+    <h1>
+        Create Post
+    </h1>
+
+    <div>
+        <form action="{% url 'post:new_post' %}"
+              method="post"
+              enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for item in form %}
+                <div class="my-3">
+                    {{ item }}
+                </div>
+            {% endfor %}
+            <input type="submit" value="Create" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

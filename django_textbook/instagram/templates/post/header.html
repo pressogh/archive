@@ -1,0 +1,25 @@
+{% load static %}
+<header>
+    <div class="header">
+        <div class="header-logo">
+            <a href="{% url 'post:index' %}">
+                <img src="{% static 'img/post/Instagram_logo.svg'%}" alt="logo">
+            </a>
+        </div>
+        <div class="header-search">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="header-right">
+            <div>
+                <a href="{% url 'post:new_post' %}">
+                    <i class="fa fa-plus-circle fa-2x"></i>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <i class="fa fa-user fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header> 
